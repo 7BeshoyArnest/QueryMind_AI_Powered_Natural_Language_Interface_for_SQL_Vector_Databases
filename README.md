@@ -165,8 +165,13 @@ Build the image
 docker build -t querymind .
 
 Run the container
+
    docker run -p 7860:7860 \
+   
      -e GROQ_API_KEY=your_key \
+     
      -e TAVILY_API_KEY=your_key \
+     
      -e LANGCHAIN_API_KEY=your_key \
+     
      querymind
