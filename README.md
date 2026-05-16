@@ -157,3 +157,16 @@ Once your databases are ready, you can either connect the current agents to the 
 - **OpenAI:** [Developer Quickstart](https://platform.openai.com/docs/quickstart?context=python)
 - **Tavily Search**
 ---
+
+Docker
+
+Build the image
+
+docker build -t querymind .
+
+Run the container
+   docker run -p 7860:7860 \
+     -e GROQ_API_KEY=your_key \
+     -e TAVILY_API_KEY=your_key \
+     -e LANGCHAIN_API_KEY=your_key \
+     querymind
