@@ -1,4 +1,13 @@
-
+---
+title: QueryMind
+emoji: 🧠
+colorFrom: blue
+colorTo: purple
+sdk: gradio
+sdk_version: 4.43.0
+app_file: app.py
+pinned: false
+---
 ---
 
 # AgentGraph: Intelligent SQL-agent Q&A and RAG System for Chatting with Multiple Databases

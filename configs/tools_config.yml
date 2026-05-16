@@ -4,7 +4,7 @@ primary_agent:
 
 swiss_airline_policy_rag:
   unstructured_docs: "data/unstructured_docs/swiss_airline_policy"
-  vectordb: "data/airline_policy_vectordb"
+  vectordb: "/tmp/airline_policy_vectordb"
   collection_name: rag-chroma
   llm: openai/gpt-oss-120b
   llm_temperature: 0.0
@@ -15,7 +15,7 @@ swiss_airline_policy_rag:
 
 stories_rag:
   unstructured_docs: "data/unstructured_docs/stories"
-  vectordb: "data/stories_vectordb"
+  vectordb: "/tmp/stories_vectordb"
   collection_name: stories-rag-chroma
   llm: openai/gpt-oss-120b
   llm_temperature: 0.0
