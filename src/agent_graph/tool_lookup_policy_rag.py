@@ -11,13 +11,13 @@ class SwissAirlinePolicyRAGTool:
     A tool for retrieving relevant Swiss Airline policy documents using a 
     Retrieval-Augmented Generation (RAG) approach with vector embeddings.
 
-    This tool uses a pre-trained OpenAI embedding model to transform queries into 
+    This tool uses a pre-trained Hugging Face embedding model to transform queries into 
     vector representations. These vectors are then used to query a Chroma-based 
     vector database (persisted on disk) to retrieve the top-k most relevant 
     documents or entries from a specific collection, such as Swiss Airline policies.
 
     Attributes:
-        embedding_model (str): The name of the OpenAI embedding model used for 
+        embedding_model (str): The name of the Hugging Face embedding model used for 
             generating vector representations of the queries.
         vectordb_dir (str): The directory where the Chroma vector database is 
             persisted on disk.
@@ -36,7 +36,7 @@ class SwissAirlinePolicyRAGTool:
         Initializes the SwissAirlinePolicyRAGTool with the necessary configuration.
 
         Args:
-            embedding_model (str): The name of the embedding model (e.g., "text-embedding-ada-002")
+            embedding_model (str): The name of the embedding model (e.g., "all-MiniLM-L6-v2")
                 used to convert queries into vector representations.
             vectordb_dir (str): The directory path where the Chroma vector database is stored 
                 and persisted on disk.
