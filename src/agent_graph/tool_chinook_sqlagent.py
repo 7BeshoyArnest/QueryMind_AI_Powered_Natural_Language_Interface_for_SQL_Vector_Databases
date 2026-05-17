@@ -76,7 +76,7 @@ class ChinookSQLAgent:
     executes queries against the database using the appropriate tables.
 
     Attributes:
-        sql_agent_llm (ChatOpenAI): The language model used for interpreting and interacting with the database.
+        sql_agent_llm (ChatGroq): The language model used for interpreting and interacting with the database.
         db (SQLDatabase): The SQL database object, representing the Chinook database.
         full_chain (Runnable): A chain of operations that maps user questions to SQL tables and executes queries.
 
@@ -85,7 +85,7 @@ class ChinookSQLAgent:
 
     Args:
         sqldb_directory (str): The directory where the Chinook SQLite database file is located.
-        llm (str): The name of the LLM model to use (e.g., "gpt-3.5-turbo").
+        llm (str): The name of the LLM model to use (e.g., "openai/gpt-oss-120b").
         llm_temperature (float): The temperature setting for the LLM, controlling the randomness of responses.
     """
 
@@ -96,7 +96,7 @@ class ChinookSQLAgent:
 
         Args:
             sqldb_directory (str): The directory path to the SQLite database file.
-            llm (str): The LLM model identifier (e.g., "gpt-3.5-turbo").
+            llm (str): The LLM model identifier (e.g., "openai/gpt-oss-120b").
             llm_temerature (float): The temperature value for the LLM, determining the randomness of the model's output.
         """
         self.sql_agent_llm = ChatGroq(model=llm, temperature=llm_temerature)
