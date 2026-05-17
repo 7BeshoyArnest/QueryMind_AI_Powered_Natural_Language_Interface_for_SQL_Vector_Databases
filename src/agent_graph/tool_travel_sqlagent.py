@@ -21,7 +21,7 @@ class TravelSQLAgentTool:
     generate a final answer for the user.
 
     Attributes:
-        sql_agent_llm (ChatOpenAI): An instance of a ChatOpenAI language model used to generate and process SQL queries.
+        sql_agent_llm (ChatGroq): An instance of a ChatGroq language model used to generate and process SQL queries.
         system_role (str): A system prompt template that guides the language model in answering user questions based on SQL query results.
         db (SQLDatabase): An instance of the SQL database used to execute queries.
         chain (RunnablePassthrough): A chain of operations that creates SQL queries, executes them, and generates a response.
