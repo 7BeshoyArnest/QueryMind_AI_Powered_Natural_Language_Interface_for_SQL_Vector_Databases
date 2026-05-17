@@ -10,12 +10,12 @@ class StoriesRAGTool:
     """
     A tool for retrieving relevant stories using a Retrieval-Augmented Generation (RAG) approach with vector embeddings.
 
-    This tool leverages a pre-trained OpenAI embedding model to transform user queries into vector embeddings.
+    This tool leverages a pre-trained Hugging Face embedding model to transform user queries into vector embeddings.
     It then uses these embeddings to query a Chroma-based vector database to retrieve the top-k most relevant
     stories from a specific collection stored in the database.
 
     Attributes:
-        embedding_model (str): The name of the OpenAI embedding model used for generating vector representations of queries.
+        embedding_model (str): The name of the Hugging Face embedding model used for generating vector representations of queries.
         vectordb_dir (str): The directory where the Chroma vector database is persisted on disk.
         k (int): The number of top-k nearest neighbor stories to retrieve from the vector database.
         vectordb (Chroma): The Chroma vector database instance connected to the specified collection and embedding model.
@@ -29,7 +29,7 @@ class StoriesRAGTool:
         Initializes the StoriesRAGTool with the necessary configurations.
 
         Args:
-            embedding_model (str): The name of the embedding model (e.g., "text-embedding-ada-002")
+            embedding_model (str): The name of the embedding model (e.g., "all-MiniLM-L6-v2")
                 used to convert queries into vector representations.
             vectordb_dir (str): The directory path where the Chroma vector database is stored and persisted on disk.
             k (int): The number of nearest neighbor stories to retrieve based on query similarity.
